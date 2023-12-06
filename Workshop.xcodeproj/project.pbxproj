@@ -14,6 +14,7 @@
 		F8BFE3122B1FE0E700E9A169 /* WorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BFE3112B1FE0E700E9A169 /* WorkshopTests.swift */; };
 		F8BFE31C2B1FE0E700E9A169 /* WorkshopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BFE31B2B1FE0E700E9A169 /* WorkshopUITests.swift */; };
 		F8BFE31E2B1FE0E700E9A169 /* WorkshopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BFE31D2B1FE0E700E9A169 /* WorkshopUITestsLaunchTests.swift */; };
+		F8BFE32D2B1FEB1F00E9A169 /* UIelements.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BFE32C2B1FEB1F00E9A169 /* UIelements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		F8BFE3172B1FE0E700E9A169 /* WorkshopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkshopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BFE31B2B1FE0E700E9A169 /* WorkshopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopUITests.swift; sourceTree = "<group>"; };
 		F8BFE31D2B1FE0E700E9A169 /* WorkshopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8BFE32C2B1FEB1F00E9A169 /* UIelements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIelements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,8 @@
 			children = (
 				F8BFE3002B1FE0E500E9A169 /* WorkshopApp.swift */,
 				F8BFE3022B1FE0E500E9A169 /* ContentView.swift */,
+				F8BFE32B2B1FEA5100E9A169 /* Model */,
+				F8BFE32A2B1FEA0500E9A169 /* Views */,
 				F8BFE3042B1FE0E700E9A169 /* Assets.xcassets */,
 				F8BFE3062B1FE0E700E9A169 /* Preview Content */,
 			);
@@ -125,6 +129,21 @@
 				F8BFE31D2B1FE0E700E9A169 /* WorkshopUITestsLaunchTests.swift */,
 			);
 			path = WorkshopUITests;
+			sourceTree = "<group>";
+		};
+		F8BFE32A2B1FEA0500E9A169 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFE32C2B1FEB1F00E9A169 /* UIelements.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F8BFE32B2B1FEA5100E9A169 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8BFE32D2B1FEB1F00E9A169 /* UIelements.swift in Sources */,
 				F8BFE3032B1FE0E500E9A169 /* ContentView.swift in Sources */,
 				F8BFE3012B1FE0E500E9A169 /* WorkshopApp.swift in Sources */,
 			);
