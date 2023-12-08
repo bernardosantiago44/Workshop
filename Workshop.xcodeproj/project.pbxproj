@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8173F412B227DFD0097CC30 /* ProfileDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8173F402B227DFD0097CC30 /* ProfileDescription.swift */; };
+		F8173F432B228A900097CC30 /* ProfileNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8173F422B228A900097CC30 /* ProfileNavigation.swift */; };
+		F8173F452B228BE00097CC30 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8173F442B228BE00097CC30 /* ProjectDetailView.swift */; };
+		F8173F472B2292D60097CC30 /* MySocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8173F462B2292D60097CC30 /* MySocialMedia.swift */; };
 		F8BFE3012B1FE0E500E9A169 /* WorkshopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BFE3002B1FE0E500E9A169 /* WorkshopApp.swift */; };
 		F8BFE3032B1FE0E500E9A169 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BFE3022B1FE0E500E9A169 /* ContentView.swift */; };
 		F8BFE3052B1FE0E700E9A169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8BFE3042B1FE0E700E9A169 /* Assets.xcassets */; };
@@ -39,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F8173F402B227DFD0097CC30 /* ProfileDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDescription.swift; sourceTree = "<group>"; };
+		F8173F422B228A900097CC30 /* ProfileNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigation.swift; sourceTree = "<group>"; };
+		F8173F442B228BE00097CC30 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		F8173F462B2292D60097CC30 /* MySocialMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySocialMedia.swift; sourceTree = "<group>"; };
 		F8BFE2FD2B1FE0E500E9A169 /* Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BFE3002B1FE0E500E9A169 /* WorkshopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopApp.swift; sourceTree = "<group>"; };
 		F8BFE3022B1FE0E500E9A169 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,7 +151,11 @@
 			isa = PBXGroup;
 			children = (
 				F8BFE32C2B1FEB1F00E9A169 /* UIelements.swift */,
+				F8173F442B228BE00097CC30 /* ProjectDetailView.swift */,
 				F8D39B0C2B21392800B5B95B /* PersonProfilePicture.swift */,
+				F8173F402B227DFD0097CC30 /* ProfileDescription.swift */,
+				F8173F422B228A900097CC30 /* ProfileNavigation.swift */,
+				F8173F462B2292D60097CC30 /* MySocialMedia.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,11 +300,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8173F412B227DFD0097CC30 /* ProfileDescription.swift in Sources */,
 				F8BFE32D2B1FEB1F00E9A169 /* UIelements.swift in Sources */,
 				F8BFE3032B1FE0E500E9A169 /* ContentView.swift in Sources */,
 				F8D39B072B212EA300B5B95B /* Person.swift in Sources */,
 				F8D39B0B2B21303800B5B95B /* SocialMedia.swift in Sources */,
 				F8D39B0D2B21392800B5B95B /* PersonProfilePicture.swift in Sources */,
+				F8173F472B2292D60097CC30 /* MySocialMedia.swift in Sources */,
+				F8173F432B228A900097CC30 /* ProfileNavigation.swift in Sources */,
+				F8173F452B228BE00097CC30 /* ProjectDetailView.swift in Sources */,
 				F8D39B092B212FBC00B5B95B /* Project.swift in Sources */,
 				F8BFE3012B1FE0E500E9A169 /* WorkshopApp.swift in Sources */,
 			);
@@ -455,6 +471,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Workshop/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Workshop;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -483,6 +500,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Workshop/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Workshop;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -7,13 +7,14 @@
 
 import Foundation
 
-struct SocialMedia {
+struct SocialMedia: Identifiable {
+    let id = UUID().uuidString
     var media: String
     var url: String
 }
 
 extension SocialMedia {
     static let mySocialMedia = [
-        SocialMedia(media: "GitHub", url: "www.github.com/bernardosantiago44")
+        SocialMedia(media: "GitHub", url: "https://github.com/bernardosantiago44")
     ]
 }
