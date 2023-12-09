@@ -22,5 +22,5 @@ extension Person {
                                   hobbies: ["Coding", "Running", "Reading", "Teaching"],
                                   projects: Project.myProjects,
                                   socialMedia: SocialMedia.mySocialMedia,
-                                  photos: [])
+                                  photos: ["landscape1", "london-day", "london-night"])
 }

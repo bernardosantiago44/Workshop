@@ -21,11 +21,11 @@ extension Project {
                 description: "Learned app development with 15 other people in Swift using SwiftUI",
                 rating: 5,
                 photos: []),
-        Project(title: "SwiftUI Course",
+        Project(title: "App development course",
                 description: "Learned app development with 15 other people in Swift using SwiftUI",
                 rating: 5,
                 photos: []),
-        Project(title: "SwiftUI Course",
+        Project(title: "Course at Tec",
                 description: "Learned app development with 15 other people in Swift using SwiftUI",
                 rating: 5,
                 photos: [])
