@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ProjectsList: View {
+    @ObservedObject var viewModel: ViewModel
     @State private var searching = ""
+    @State private var showNewProjectSheet = false
     let projects: [Project]
     var filteredProjects: [Project] {
         if searching.isEmpty {
@@ -45,12 +47,27 @@ struct ProjectsList: View {
             }
             .navigationTitle("Projects")
             .searchable(text: $searching)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        self.showNewProjectSheet.toggle()
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title3)
+                    }
+                }
+            }
+            .sheet(isPresented: $showNewProjectSheet, content: {
+                NavigationStack {
+                    NewProjectSheet(viewModel: self.viewModel)
+                }
+            })
         }
     }
 }
 
 struct ProjectsList_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectsList(projects: Person.myProfile.projects)
+        ProjectsList(viewModel: ViewModel(), projects: Person.myProfile.projects)
     }
 }

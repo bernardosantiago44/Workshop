@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ProfileNavigation: View {
+    @ObservedObject var viewModel: ViewModel
     let profile: Person
+    
     var body: some View {
         NavigationView {
-            ProfileDescription(profile: profile)
+            ProfileDescription(viewModel: self.viewModel, profile: profile)
                 .navigationTitle("My profile")
         }
     }
@@ -19,6 +21,6 @@ struct ProfileNavigation: View {
 
 struct ProfileNavigation_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileNavigation(profile: Person.myProfile)
+        ProfileNavigation(viewModel: ViewModel(), profile: Person.myProfile)
     }
 }

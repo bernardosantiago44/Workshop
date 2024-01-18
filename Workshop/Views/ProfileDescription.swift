@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProfileDescription: View {
+    @ObservedObject var viewModel: ViewModel
+    
     let profile: Person
     let columns = Array(repeating: GridItem(.flexible()), count: 2)
     
@@ -34,7 +36,7 @@ struct ProfileDescription: View {
                 .font(.headline)
             
             LazyVGrid(columns: self.columns) {
-                ForEach(profile.projects) { project in
+                ForEach(self.viewModel.projects) { project in
                     
                     NavigationLink {
                         ProjectDetailView(project: project)
@@ -75,7 +77,7 @@ struct LeadingAlignedText: View {
 struct ProfileDescription_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ProfileDescription(profile: Person.myProfile)
+            ProfileDescription(viewModel: ViewModel(), profile: Person.myProfile)
         }
     }
 }

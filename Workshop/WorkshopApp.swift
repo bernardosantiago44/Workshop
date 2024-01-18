@@ -19,10 +19,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct WorkshopApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var viewModel: ViewModel = ViewModel()
+    @StateObject var navigationModel = NavigationModel()
+    @StateObject var settingsViewModel = SettingsViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: self.viewModel, navigationModel: self.navigationModel, settingsViewModel: self.settingsViewModel)
         }
     }
 }

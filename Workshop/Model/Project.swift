@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Project: Identifiable {
-    let id: String = UUID().uuidString
+struct Project: Identifiable, Codable {
+    var id: String = UUID().uuidString
     var title: String
     var description: String
     var rating: Float
@@ -21,7 +21,7 @@ extension Project {
                 description: "Learned app development with 15 other people in Swift using SwiftUI",
                 rating: 5,
                 photos: []),
-        Project(title: "App development course",
+        Project(title: "App development",
                 description: "Learned app development with 15 other people in Swift using SwiftUI",
                 rating: 5,
                 photos: []),
