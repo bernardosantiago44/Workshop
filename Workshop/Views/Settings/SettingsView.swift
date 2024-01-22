@@ -30,9 +30,6 @@ struct SettingsView: View {
                         Text("User")
                     }
                 }
-                .onAppear {
-                    self.settingsViewModel.retrieveUser()
-                }
             .navigationTitle("Settings")
             }
         } else {

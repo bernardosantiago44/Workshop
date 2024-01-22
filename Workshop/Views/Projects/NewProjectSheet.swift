@@ -36,9 +36,13 @@ struct NewProjectSheet: View {
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button("Add") {
-                    
+                    let newProject = Project(title: self.projectTitle, description: self.projectDescription, rating: self.projectRating, photos: [])
+                    self.viewModel.addNewProject(
+                        project: newProject) {
+                            dismiss()
+                        }
                 }
-                .disabled(self.isInvalidProject)
+                .disabled(self.isInvalidProject || self.viewModel.actionResponse == .inProgress)
             }
             ToolbarItem(placement: .cancellationAction) {
                 Button(role: .cancel) {

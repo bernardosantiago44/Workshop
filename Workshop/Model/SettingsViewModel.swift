@@ -11,7 +11,21 @@ import FirebaseAuth
 final class SettingsViewModel: ObservableObject {
     @Published var currentUser: User? 
     
+    private var authStateHandler: AuthStateDidChangeListenerHandle?
+    
+    init() {
+        registerAuthStateHandler()
+    }
+    
     func retrieveUser() {
         self.currentUser = Auth.auth().currentUser
+    }
+    
+    func registerAuthStateHandler() {
+        if self.authStateHandler == nil {
+            self.authStateHandler = Auth.auth().addStateDidChangeListener({ auth, user in
+                self.currentUser = user
+            })
+        }
     }
 }

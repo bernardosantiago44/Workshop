@@ -15,8 +15,8 @@ final class NavigationModel: ObservableObject {
     
     init() {
         self.selectedTab = .profile
-        self.showLoginView = Auth.auth().currentUser == nil
         self.authenticationPath = NavigationPath()
+        self.showLoginView = Auth.auth().currentUser == nil
     }
     
     func goToMainTab() {

@@ -24,7 +24,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Social Media", systemImage: NavigationTab.socialMedia.rawValue)
                 }
-            ProjectsList(viewModel: ViewModel(), projects: Person.myProfile.projects)
+            ProjectsList(viewModel: self.viewModel)
                 .tag(NavigationTab.projects)
                 .tabItem {
                     Label("Projects", systemImage: NavigationTab.projects.rawValue)

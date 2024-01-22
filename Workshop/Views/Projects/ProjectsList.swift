@@ -11,23 +11,20 @@ struct ProjectsList: View {
     @ObservedObject var viewModel: ViewModel
     @State private var searching = ""
     @State private var showNewProjectSheet = false
-    let projects: [Project]
     var filteredProjects: [Project] {
         if searching.isEmpty {
-            return projects
+            return viewModel.projects
         }
         
-        return projects.filter { project in
+        return viewModel.projects.filter { project in
             project.title.clean().contains(searching.clean())
         }
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(filteredProjects) { project in
-                NavigationLink {
-                    ProjectDetailView(project: project)
-                } label: {
+                NavigationLink(value: project) {
                     VStack(alignment: .leading) {
                         HStack {
                             Text(project.title)
@@ -62,12 +59,29 @@ struct ProjectsList: View {
                     NewProjectSheet(viewModel: self.viewModel)
                 }
             })
+            .refreshable {
+                await viewModel.fetchProjectsFromDatabase()
+            }
+            .alert("Error", isPresented: self.$viewModel.showErrorMessage) {
+                
+            } message: {
+                Text(self.viewModel.errorMessage ?? "Unexpected error")
+            }
+            .onAppear {
+                guard !viewModel.didFirstFetch else { return }
+                Task {
+                    await viewModel.fetchProjectsFromDatabase()
+                }
+            }
+            .navigationDestination(for: Project.self) { project in
+                ProjectDetailView(project: project)
+            }
         }
     }
 }
 
 struct ProjectsList_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectsList(viewModel: ViewModel(), projects: Person.myProfile.projects)
+        ProjectsList(viewModel: ViewModel())
     }
 }
